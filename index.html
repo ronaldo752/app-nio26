@@ -1,1 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netgo Telecom · Fibra Óptica</title>
+  <!-- Bootstrap 5 CSS + ícones Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons (biblioteca oficial de ícones) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Google Fonts (opcional, para dar um toque especial) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f8fafc;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.7rem;
+      letter-spacing: -0.5px;
+    }
+    .bg-netgo {
+      background: linear-gradient(135deg, #0b1e33 0%, #123456 100%);
+    }
+    .hero-section {
+      background: linear-gradient(115deg, #f0f7ff 0%, #e6edf7 100%);
+      border-bottom: 4px solid #fcb414;
+    }
+    .icone-circ {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background-color: rgba(252, 180, 20, 0.15);
+      color: #1f3a5f;
+      font-size: 2rem;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+    .card-plan {
+      border: none;
+      border-radius: 24px;
+      transition: all 0.2s;
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.1);
+    }
+    .card-plan:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -10px rgba(0,30,60,0.2);
+    }
+    .btn-outline-netgo {
+      border: 2px solid #1f3a5f;
+      color: #1f3a5f;
+      border-radius: 40px;
+      font-weight: 600;
+      padding: 0.5rem 1.8rem;
+    }
+    .btn-outline-netgo:hover {
+      background-color: #1f3a5f;
+      color: #fcb414;
+    }
+    .btn-netgo {
+      background-color: #1f3a5f;
+      color: white;
+      border-radius: 40px;
+      font-weight: 600;
+      padding: 0.5rem 2rem;
+      border: none;
+    }
+    .btn-netgo:hover {
+      background-color: #fcb414;
+      color: #0b1e33;
+    }
+    .bg-footer {
+      background-color: #0f1e2f;
+    }
+    .text-amarelo {
+      color: #fcb414;
+    }
+    .info-cnpj {
+      background: white;
+      border-radius: 40px;
+      padding: 1.2rem 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+    .info-cnpj i {
+      color: #fcb414;
+      margin-right: 8px;
+    }
+    .info-cnpj small {
+      font-size: 0.9rem;
+    }
+    .section-title {
+      font-weight: 700;
+      color: #0b1e33;
+      border-left: 7px solid #fcb414;
+      padding-left: 1.2rem;
+    }
+  </style>
+</head>
+<body>
 
+  <!-- NAVBAR (escura com detalhe dourado) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-netgo py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-wifi text-amarelo me-2"></i>Netgo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNetgo" 
+              aria-controls="navbarNetgo" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNetgo">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planos">Planos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO (chamada principal + dados cadastrais em destaque) -->
+  <section class="hero-section py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold mb-3" style="color: #0b1e33;">
+            Internet de verdade <br><span style="color: #b87c10;">para Macaíba</span>
+          </h1>
+          <p class="lead text-secondary">Fibra óptica estável, suporte humano e a melhor experiência da região.</p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#planos" class="btn btn-netgo px-4 py-2"><i class="bi bi-rocket-takeoff me-2"></i>Ver planos</a>
+            <a href="#contato" class="btn btn-outline-netgo px-4 py-2"><i class="bi bi-telephone me-2"></i>(84) 3015-1515</a>
+          </div>
+          <!-- dados institucionais (ícones e informações da empresa) -->
+          <div class="info-cnpj mt-5 d-flex flex-wrap align-items-center">
+            <div class="me-4 mb-2"><i class="bi bi-calendar-check fs-5"></i> <small>Desde 17/02/2011</small></div>
+            <div class="me-4 mb-2"><i class="bi bi-qr-code-scan fs-5"></i> <small>CNPJ 13.268.334/0001-92</small></div>
+            <div class="mb-2"><i class="bi bi-pin-map fs-5"></i> <small>Rua Antonio Lucas de Lima, 32</small></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- ilustração / ícone grande de roteador -->
+          <div class="text-center">
+            <i class="bi bi-router" style="font-size: 12rem; color: #1f3a5f; opacity: 0.8;"></i>
+            <div class="mt-2 text-muted">Netgo Telecomunicações do Brasil</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dados da Razão Social / nome fantasia em destaque (pequeno card) -->
+  <div class="container mt-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="d-flex bg-white p-3 rounded-4 shadow-sm border">
+          <div class="me-4"><i class="bi bi-building fs-3 text-amarelo"></i></div>
+          <div><span class="fw-semibold">Souza Almeida Tecnologia LTDA</span> <span class="badge bg-warning text-dark ms-2">Netgo Telecom</span><br>
+          <small class="text-secondary">Rua Antonio Lucas de Lima, 32 · Bairro Auta de Souza · Macaíba/RN · CEP 59280-352</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEÇÃO SERVIÇOS (ícones e frases) -->
+  <section id="servicos" class="container my-5 pt-4">
+    <h2 class="section-title display-6 mb-4">Nossos serviços</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card-plan bg-white p-4 text-center h-100">
+          <div class="icone-circ mx-auto"><i class="bi bi-speedometer2"></i></div>
+          <h4 class="fw-bold">Ultra velocidade</h4>
+          <p class="text-secondary">Fibra óptica simétrica de verdade, com baixa latência para jogos e streaming.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-plan bg-white p-4 text-center h-100">
+          <div class="icone-circ mx-auto"><i class="bi bi-shield-check"></i></div>
+          <h4 class="fw-bold">Conexão estável</h4>
+          <p class="text-secondary">Estabilidade 24/7, infraestrutura moderna e monitoramento ativo.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card-plan bg-white p-4 text-center h-100">
+          <div class="icone-circ mx-auto"><i class="bi bi-headset"></i></div>
+          <h4 class="fw-bold">Suporte humanizado</h4>
+          <p class="text-secondary">Atendimento local e rápido. Suporte técnico em Macaíba e região.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS (cards com informações) -->
+  <section id="planos" class="container my-5 pt-3">
+    <h2 class="section-title display-6 mb-4">Planos ideais pra você</h2>
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card-plan bg-white p-4">
+          <i class="bi bi-wifi fs-1 text-amarelo"></i>
+          <h3 class="fw-bold mt-3">Netgo 300</h3>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>300 Mega fibra</p>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>Wi-Fi 5 incluso</p>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>Suporte prioritário</p>
+          <h2 class="fw-bold mt-3">R$ 89,90</h2>
+          <p class="text-muted"><small>+ taxas de instalação sob consulta</small></p>
+          <a href="#" class="btn btn-outline-netgo w-100 mt-3">Assinar</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card-plan bg-white p-4 border-warning border-2">
+          <span class="badge bg-warning text-dark mb-2">MAIS ESCOLHIDO</span>
+          <i class="bi bi-wifi fs-1 text-amarelo"></i>
+          <h3 class="fw-bold mt-3">Netgo 500</h3>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>500 Mega fibra</p>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>Wi-Fi 6 mesh</p>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>Instalação preferencial</p>
+          <h2 class="fw-bold mt-3">R$ 129,90</h2>
+          <p class="text-muted"><small>+ taxas de instalação sob consulta</small></p>
+          <a href="#" class="btn btn-netgo w-100 mt-3">Assinar</a>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card-plan bg-white p-4">
+          <i class="bi bi-wifi fs-1 text-amarelo"></i>
+          <h3 class="fw-bold mt-3">Netgo 800</h3>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>800 Mega fibra</p>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>Roteador incluso</p>
+          <p class="text-secondary"><i class="bi bi-check-circle-fill text-success me-2"></i>2 pontos extras</p>
+          <h2 class="fw-bold mt-3">R$ 179,90</h2>
+          <p class="text-muted"><small>+ taxas de instalação sob consulta</small></p>
+          <a href="#" class="btn btn-outline-netgo w-100 mt-3">Assinar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO DE CONTATO + DADOS COMPLETOS (ícones e informações legais) -->
+  <section id="contato" class="container my-5 pt-3">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <h2 class="section-title display-6 mb-4">Fale com a Netgo</h2>
+        <div class="d-flex mb-4">
+          <i class="bi bi-telephone-fill fs-3 text-amarelo me-3"></i>
+          <div><span class="fw-bold">(84) 3015-1515</span> <br><small class="text-secondary">Também WhatsApp</small></div>
+        </div>
+        <div class="d-flex mb-4">
+          <i class="bi bi-geo-alt-fill fs-3 text-amarelo me-3"></i>
+          <div>
+            <span class="fw-bold">Rua Antonio Lucas de Lima, 32</span><br>
+            <span>Bairro Auta de Souza · Macaíba - RN · 59280-352</span>
+          </div>
+        </div>
+        <div class="d-flex mb-4">
+          <i class="bi bi-envelope-fill fs-3 text-amarelo me-3"></i>
+          <div><span class="fw-bold">contato@netgotelecom.com.br</span><br><small>ouvidoria@netgotelecom.com.br</small></div>
+        </div>
+        <div class="d-flex mb-4">
+          <i class="bi bi-file-earmark-text-fill fs-3 text-amarelo me-3"></i>
+          <div>
+            <span><strong>CNPJ:</strong> 13.268.334/0001-92</span><br>
+            <span><strong>Razão Social:</strong> Souza Almeida Tecnologia LTDA</span><br>
+            <span><strong>Nome Fantasia:</strong> Netgo Telecomunicacoes do Brasil</span><br>
+            <span><strong>Data de abertura:</strong> 17/02/2011 (situação cadastral ativa)</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <!-- mapa fake (placeholder decorativo com ícones de localização) -->
+        <div class="bg-white p-4 rounded-4 shadow-sm text-center">
+          <i class="bi bi-map" style="font-size: 8rem; color: #1f3a5f; opacity: 0.3;"></i>
+          <p class="mt-3"><i class="bi bi-pin-fill text-amarelo"></i> <strong>Bairro Auta de Souza, Macaíba/RN</strong> — atendemos toda a região.</p>
+          <hr>
+          <div class="row text-start">
+            <div class="col-6">
+              <i class="bi bi-clock-history"></i> Atendimento: <br>seg-sex 8h-20h, sáb 8h-14h
+            </div>
+            <div class="col-6">
+              <i class="bi bi-truck"></i> Instalação em até 24h
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ completo com ícones e dados extras -->
+  <footer class="bg-footer text-white pt-5 pb-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h4 class="text-amarelo"><i class="bi bi-wifi"></i> Netgo Telecom</h4>
+          <p class="small opacity-75">Fibra óptica com o jeito nordestino de cuidar de cliente. Mais de 10 anos conectando Macaíba.</p>
+          <p><i class="bi bi-telephone me-2"></i>(84) 3015-1515</p>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-amarelo">Institucional</h5>
+          <ul class="list-unstyled small">
+            <li><i class="bi bi-check2 me-2"></i>Souza Almeida Tecnologia LTDA</li>
+            <li><i class="bi bi-check2 me-2"></i>CNPJ 13.268.334/0001-92</li>
+            <li><i class="bi bi-check2 me-2"></i>NIRE: 123456789 (exemplo)</li>
+            <li><i class="bi bi-check2 me-2"></i>Cadastro ativo desde 17/02/2011</li>
+          </ul>
+        </div>
+        <div class="col-md-4 mb-4">
+          <h5 class="text-amarelo">Endereço</h5>
+          <p><i class="bi bi-pin-fill me-2"></i>Rua Antonio Lucas de Lima, 32<br>
+          Bairro Auta de Souza, Macaíba/RN<br>
+          CEP 59280-352</p>
+          <div class="mt-3">
+            <i class="bi bi-facebook fs-4 me-3"></i>
+            <i class="bi bi-instagram fs-4 me-3"></i>
+            <i class="bi bi-whatsapp fs-4"></i>
+          </div>
+        </div>
+      </div>
+      <hr class="opacity-25">
+      <div class="row">
+        <div class="col text-center small opacity-50">
+          Netgo Telecomunicações do Brasil © 2025 — Todos os direitos reservados. Site desenvolvido com HTML, Bootstrap e muito <i class="bi bi-heart-fill text-danger"></i>.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (opcional para interatividade da navbar toggle) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
